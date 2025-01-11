@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard Operator</title>
+	<style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { width: 100%; max-width: 400px; margin: 50px auto; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .input-field { margin-bottom: 15px; width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        .button { background-color: #4CAF50; color: white; padding: 10px; border: none; border-radius: 5px; width: 100%; cursor: pointer; }
+        .button:hover { background-color: #45a049; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <!-- Login Form -->
+    <div id="loginForm" class="container">
+        <h2>Login Operator</h2>
+        <input type="text" id="username" class="input-field" placeholder="Username">
+        <input type="password" id="password" class="input-field" placeholder="Password">
+        <button class="button" onclick="login()">Login</button>
+    </div>
+
+    <!-- Dashboard Operator -->
+    <div id="dashboard" class="container hidden">
+        <h2>Dashboard Operator</h2>
+        <p>Nama: <input type="text" id="operatorName" class="input-field" placeholder="Nama Operator"></p>
+        <p>No. ID: <input type="text" id="operatorId" class="input-field" placeholder="No. ID Operator"></p>
+        <p>Job Title: <input type="text" id="jobTitle" class="input-field" placeholder="ATT / CBL"></p>
+        <p>Km / HM Service Berkala: <input type="text" id="kmService" class="input-field" placeholder="Isi sesuai jadwal"></p>
+        <p>Firex 25 kg: <input type="text" id="firex25" class="input-field" placeholder="Isi jumlah Firex 25 kg"></p>
+        <p>Firex 5 kg: <input type="text" id="firex5" class="input-field" placeholder="Isi jumlah Firex 5 kg"></p>
+        <button class="button" onclick="submitData()">Submit</button>
+        <button class="button" onclick="logout()">Log Out</button>
+    </div>
+
+    <!-- Dashboard Leader -->
+    <div id="leaderDashboard" class="container hidden">
+        <h2>Dashboard Leader</h2>
+        <div id="leaderData">
+            <!-- Data operator akan muncul di sini -->
+        </div>
+        <button class="button" onclick="logout()">Log Out</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
